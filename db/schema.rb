@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20150327015953) do
 
-  create_table "links", force: :cascade do |t|
+  create_table "links", force: true do |t|
     t.string   "title"
     t.string   "url"
     t.datetime "created_at", null: false
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20150327015953) do
 
   add_index "links", ["user_id"], name: "index_links_on_user_id"
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
